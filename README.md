@@ -19,7 +19,7 @@ Remove <code>-d</code> to run in foreground (not recommended)
 ## Using environment variables
 You can pass some facultative environment variables to this app:
 
-- <code>CODEC=mp3:bitrate|flc:quality|wav</code> (flc is for FLAC, <code>bitrate</code> and <code>quality</code> must be specified if using FLAC or MP3). Default: <code>flc</code>
+- <code>CODEC=mp3:bitrate|flc:quality|wav</code> (flc is for FLAC). <code>bitrate</code> must be specified if using MP3). Default: <code>flc</code>
 
 - <code>METADATA=1|0</code> either if you wish to broadcast songs metadata to Sonos (1) or not (0). Default: <code>1</code>
 
@@ -51,7 +51,7 @@ services:
     - CODEC='wav'
 ```
 
-Next, run it daemonized:
+Run it, daemonized:
 
 ```sh
 docker-compose up -d
@@ -66,17 +66,17 @@ docker run -d --net=host cinammonpourpre/airconnect
 ```sh
 docker exec -ti airconnect sh
 ```
-3) Generate a sample conf file and override the default one
+3) Generate a sample conf file that will override the default one
 ```sh
 airupnp -i /etc/airupnp.conf
 ```
-After a few segonds, <code>Ctrl</code>+<code>C</code> to exit and return to the container shell.
+After a few seconds press <code>Ctrl</code>+<code>C</code> to exit and return to the container shell.
 
 4) Edit the conf file with <code>vi</code>
 ```sh
 vi /etc/airupnp.conf
 ```
-5) Locate the <code>name</code> parameter and edit it with the name you want and voilà :)
+5) Locate the <code>name</code> parameter and edit the value with the name you want :)
 
 ### By passing the <code>name</code> env variable (only works if a single Sonos device is detected)
 1) Follow the guide below from step 1. to step 4. and add an env variable as <code>NAME=your_device_name</code> in your <code>docker-compose.yml</code> file or in the command.
@@ -94,5 +94,5 @@ vi /etc/airupnp.conf
 ## Author
 👤 **François Brille**
 
-* Website: francois-brille.fr
+* Website: https://francois-brille.fr
 * Github: [@ItsPops](https://github.com/ItsPops)
