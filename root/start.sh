@@ -1,7 +1,6 @@
 #!/bin/sh
-env
-
-set -x
+#env
+#set -x
 
 set_val() {
     if [ -n "$2" ]; then
@@ -15,11 +14,7 @@ set_val() {
 set_val $CODEC codec
 set_val $METADATA metadata
 set_val $LATENCY latency
-
-#Which name for the AirPlay Receiver ?
 set_val $NAME name
-
-#Should artwork be send ? Either 1 or 0
 set_val $ARTWORK artwork
 
 airupnp -x /etc/airupnp.conf
