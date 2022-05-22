@@ -1,15 +1,11 @@
 <h1 align="center">Welcome to docker-airconnect 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
-  <a href="Hey" target="_blank">
-    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
-  </a>
 </p>
 
 A simple and lightweight Docker image based on Alpine Linux to stream AirPlay to Sonos effortlessly.
-Based on [@philippe44](https://github.com/philippe44/airconnect)'s work.
+Based on [@philippe44](https://github.com/philippe44/airconnect)'s fantastic work.
 
-### 🏠 [Homepage](https://github.com/ItsPops/docker-airconnect)
 ## The easy way
 
 ```sh
@@ -68,6 +64,8 @@ docker-compose up -d
 
 [@philippe44](https://github.com/philippe44) most importantly for Airconnect !
 
+[@kefranabg](https://github.com/kefranabg) for this [readme-md-generator](https://github.com/kefranabg/readme-md-generator)
+
 
 
 ## Author
@@ -75,8 +73,3 @@ docker-compose up -d
 
 * Website: francois-brille.fr
 * Github: [@ItsPops](https://github.com/ItsPops)
-
-
-
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
