@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to docker-airconnect 👋</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-1.0.1-blue.svg?cacheSeconds=2592000" />
 </p>
 
 A simple and lightweight Docker image based on Alpine Linux to stream AirPlay to Sonos effortlessly.
@@ -28,6 +28,8 @@ You can pass some facultative environment variables to this app:
 - <code>ARTWORK=1|0</code> either if you wish to broadcast the artwork pic to Sonos (1) or not (0). Default: <code>1</code>
 
 - <code>NAME=your_fantastic_desired_name</code> for customizing the name of the AirPlay device. Only works if you build the image with your own conf file in <code>/etc</code> that already contains a single Sonos device. Default: <code>Sonos+</code>.
+
+- <code>$MAXVOLUME=1..100</code> for editing the max volume of the Sonos device that can be set from your AirPlay sender device. Default: <code>100</code>
 
 ## Building the image
 
@@ -80,6 +82,18 @@ vi /etc/airupnp.conf
 
 ### By passing the <code>name</code> env variable (only works if a single Sonos device is detected)
 1) Follow the guide below from step 1. to step 4. and add an env variable as <code>NAME=your_device_name</code> in your <code>docker-compose.yml</code> file or in the command.
+
+## To do:
+
+☐ Multi platform Docker image building (current image not tested on x86_64)
+
+☐ Adding AirCast to allow streaming to Chromecast
+
+☐ Adding more env variables to edit things 
+
+☐ Building from latest AirConnect sources instead of precompiled binaries
+
+
 ## Many thanks to: 
 [@1activegeek](https://github.com/1activegeek) for his multiplatform build technique
 

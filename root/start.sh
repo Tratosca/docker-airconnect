@@ -16,5 +16,6 @@ set_val $METADATA metadata
 set_val $LATENCY latency
 set_val $NAME name
 set_val $ARTWORK artwork
+set_val $MAXVOLUME max_volume
 
 airupnp -x /etc/airupnp.conf
