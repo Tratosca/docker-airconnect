@@ -1,9 +1,13 @@
+arch=$(uname -m)
 if [ $(arch) = "amd64" ]; then \
 echo "Running on amd64, downloading x86-64 binary..."
 wget --no-check-certificate -O /bin/airupnp https://raw.githubusercontent.com/philippe44/AirConnect/master/bin/airupnp-x86-64-static;
 	elif [ $(arch) = "arm64" ]; then \
 echo "Runing on arm64, downloading aarch64 binary..."
-wget --no-check-certificate -O /bin/airupnp https://raw.githubusercontent.com/philippe44/AirConnect/master/bin/airupnp-aarch64-static; 
+wget --no-check-certificate -O /bin/airupnp https://raw.githubusercontent.com/philippe44/AirConnect/master/bin/airupnp-aarch64-static;
+        elif [ $(arch) = "x86_64" ]; then \
+echo "Runing on x86-64, downloading x86-64 binary..."
+wget --no-check-certificate -O /bin/airupnp https://raw.githubusercontent.com/philippe44/AirConnect/master/bin/airupnp-x86-64-static; 
 	elif [ $(arch) = "aarch64" ]; then \
 echo "Running on aarch64, downloading aarch64 binary..."
 wget --no-check-certificate -O /bin/airupnp https://raw.githubusercontent.com/philippe44/AirConnect/master/bin/airupnp-aarch64-static;
