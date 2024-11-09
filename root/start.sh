@@ -18,4 +18,4 @@ set_val $NAME name
 set_val $ARTWORK artwork
 set_val $MAXVOLUME max_volume
 
-airupnp -x /etc/airupnp.conf
+/bin/airupnp -x /etc/airupnp.conf

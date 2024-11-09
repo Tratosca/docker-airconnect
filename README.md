@@ -9,7 +9,7 @@ Based on [@philippe44](https://github.com/philippe44/airconnect)'s fantastic wor
 ## The easy way
 
 ```sh
-docker run -d --net=host cinammonpourpre/airconnect
+docker run -d --net=host tratosca/docker-airconnect
 ```
 
 Remove <code>-d</code> to run in foreground (not recommended)
@@ -48,7 +48,7 @@ services:
   airconnect:
     network_mode: "host"
     container_name: airconnect
-    image: cinammonpourpre/airconnect # this image doesn't exist anymore, please compile yourself
+    image: tratosca/docker-airconnect
     environment:
     - CODEC='wav'
 ```
@@ -62,8 +62,7 @@ docker-compose up -d
 ### By manually editing <code>etc/airupnp.conf</code> and <code>start.sh</code>
 1) Run the container once to let it detect your devices
 ```sh
-# Image is to be pushed to Docker Hub anytime soon, because cinammonpourpre is an old Docker hub account of mine removed since
-docker run -d --net=host cinammonpourpre/airconnect
+docker run -d --net=host tratosca/docker-airconnect
 ```
 2) Open a shell to the container
 ```sh
