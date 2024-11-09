@@ -48,7 +48,7 @@ services:
   airconnect:
     network_mode: "host"
     container_name: airconnect
-    image: cinammonpourpre/airconnect
+    image: cinammonpourpre/airconnect # this image doesn't exist anymore, please compile yourself
     environment:
     - CODEC='wav'
 ```
@@ -62,6 +62,7 @@ docker-compose up -d
 ### By manually editing <code>etc/airupnp.conf</code> and <code>start.sh</code>
 1) Run the container once to let it detect your devices
 ```sh
+# Image is to be pushed to Docker Hub anytime soon, because cinammonpourpre is an old Docker hub account of mine removed since
 docker run -d --net=host cinammonpourpre/airconnect
 ```
 2) Open a shell to the container
@@ -102,11 +103,3 @@ vi /etc/airupnp.conf
 [@philippe44](https://github.com/philippe44) most importantly for Airconnect !
 
 [@kefranabg](https://github.com/kefranabg) for this [readme-md-generator](https://github.com/kefranabg/readme-md-generator)
-
-
-
-## Author
-👤 **François Brille**
-
-* Website: https://francois-brille.fr
-* Github: [@ItsPops](https://github.com/ItsPops)
